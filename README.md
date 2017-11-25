@@ -18,14 +18,23 @@
 
 ![detait](https://user-images.githubusercontent.com/25068188/33230047-faf84b98-d1db-11e7-9183-ba3ed8f43329.PNG)
 
+
 ![product-small](https://user-images.githubusercontent.com/25068188/33230039-d27d0d02-d1db-11e7-84da-52937724d86d.PNG)
+
 
 ![panier](https://user-images.githubusercontent.com/25068188/33230049-0548e83c-d1dc-11e7-88b0-b92c7b42d82f.PNG)
 
+
 ![payer](https://user-images.githubusercontent.com/25068188/33230050-125f5efc-d1dc-11e7-9ce6-62d22bcb512a.PNG)
+
 
 ![braintree2](https://user-images.githubusercontent.com/25068188/33230046-f0845ac6-d1db-11e7-9d7d-0e9d3e394dce.PNG)
 
+
 ![braintree1](https://user-images.githubusercontent.com/25068188/33230043-e5bf2ad0-d1db-11e7-95ef-f2af965484f0.PNG)
 
+
 ![addproduct](https://user-images.githubusercontent.com/25068188/33230081-d341f33c-d1dc-11e7-99a6-e6d178303ad6.PNG)
+![editproduct](https://user-images.githubusercontent.com/25068188/33230112-8d99a9fa-d1dd-11e7-9007-2f9d76e54498.PNG)
+
+
