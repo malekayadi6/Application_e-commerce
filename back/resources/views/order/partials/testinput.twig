@@ -1,0 +1,68 @@
+<div class="col-md-6">
+	<h3>Your details</h3>
+	<hr>
+
+	<div class="form-group{{ (errors.email) ? ' has-error' : '' }}">
+		<label for="email">Email</label>
+		<input type="email" name="email" id="email" class="form-control" value="john@doe.com">
+		{% if errors.email %}
+			<span class="help-block">
+			{{ errors.email | first }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div class="form-group{{ (errors.name) ? ' has-error' : '' }}">
+		<label for="name">Full name</label>
+		<input type="text" name="name" id="name" class="form-control" value="John Doe">
+		{% if errors.name %}
+			<span class="help-block">
+			{{ errors.name | first }}
+			</span>
+		{% endif %}
+	</div>
+</div>
+<div class="col-md-6">
+	<h3>Shipping address</h3>
+	<hr>
+
+	<div class="form-group{{ (errors.address1) ? ' has-error' : '' }}">
+		<label for="address1">Address line 1</label>
+		<input type="text" name="address1" id="address1" class="form-control" value="dito">
+		{% if errors.address1 %}
+			<span class="help-block">
+			{{ errors.address1 | first }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div class="form-group{{ (errors.address2) ? ' has-error' : '' }}">
+		<label for="address2">Address line 2</label>
+		<input type="text" name="address2" id="address2" class="form-control" value="doon">
+		{% if errors.address2 %}
+			<span class="help-block">
+			{{ errors.address2 | first }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div class="form-group{{ (errors.city) ? ' has-error' : '' }}">
+		<label for="city">City</label>
+		<input type="text" name="city" id="city" class="form-control" value="mandaluyong">
+		{% if errors.city %}
+			<span class="help-block">
+			{{ errors.city | first }}
+			</span>
+		{% endif %}
+	</div>
+
+	<div class="form-group{{ (errors.postal_code) ? ' has-error' : '' }}">
+		<label for="postal_code">Postal code</label>
+		<input type="text" name="postal_code" id="postal_code" class="form-control" value="1609">
+		{% if errors.postal_code %}
+			<span class="help-block">
+			{{ errors.postal_code | first }}
+			</span>
+		{% endif %}
+	</div>
+</div>

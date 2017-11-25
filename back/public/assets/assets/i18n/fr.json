@@ -1,0 +1,44 @@
+{
+  "HomeLink": "Accueil",
+  "Categories": "Catégories",
+  "items-in-cart": "articles dans le panier",
+  "HomePage": {
+    "DisplayingAvialableProducts": "Affichage les produits",
+    "Popular": "Populaire",
+    "New": "Nouveau",
+    "Discount": "Remise",
+    "Price": "Prix",
+    "Low": "bas",
+    "High": "élevé"
+  },
+  "top-bar": {
+    "Register": "Inscription",
+    "Login": "Connexion",
+    "Logout": "Déconnexion",
+    "New-account": "Nouveau compte"
+  },
+  "login-page": {
+    "Already-our-customer": "Vous avez déjà un compte",
+    "Password": "Mot de passe"
+  },
+  "signup-page": {
+    "breadcrumb": "Nouveau compte / connexion",
+    "Not-our-registered": "Pas encore enregistré?",
+    "With-registration-with":"  Avec l'enregistrement , vous découvrir un nouveau monde de la technologie, des remises fantastiques et un monde très ouvert ! Tout le processus ne vous prendra pas plus d'une minute!",
+    "If-you-have-any-questions":  "Si vous avez des questions, n'hésitez pas à",
+    "If-you-have-any-questions2":  "Contactez nous",
+    "If-you-have-any-questions3":  ", Notre centre de service à la clientèle travaille pour vous 24/7.",
+    "Name": "Nom",
+    "You-must-include-a-name": "Vous devez inclure un nom.",
+    "You-must-include-caracteres": "Vous devez inclure au minimum 3 caractères.",
+    "You-must-include-a-email": "Vous devez inclure un  email.",
+    "You-must-include-a-valid-email": "Vous devez inclure un  email valide.",
+    "You-must-include-a-password": "Vous devez inclure un mot de passe .",
+    "You-must-include-caracteres6": "Vous devez inclure au minimum 6 caractères.",
+    "Confirm-Password": "Confirm mot de passe ",
+    "You-must-include-a-valid-password-confirmation": "Vous devez inclure une confirmation de mot de passe.",
+    "You-must-include-a-same-password": "Vous devez inclure le même mot de passe.",
+    "Register": "S'inscrire"
+  }
+
+}

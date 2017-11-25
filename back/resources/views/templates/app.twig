@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}{% endblock %}Slim Shopping Cart</title>
+	<!-- <link rel="icon" href="favicon.ico"> -->
+	<style>
+		body{
+			padding-bottom: 60px;
+		}
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+	{% include 'templates/partials/navigation.twig' %}
+
+	<div class="container">
+		{% block content %}{% endblock %}
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	{% block scripts %}{% endblock %}
+</body>
+</html>

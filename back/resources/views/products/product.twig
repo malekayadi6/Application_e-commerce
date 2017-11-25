@@ -1,0 +1,29 @@
+{% extends 'templates/app.twig' %}
+
+{% block title %}{{ product.title }} | {% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-md-4">
+			<img src="{{ product.image }}" alt="{{ product.title }} image" class="thumbnail img-responsive">
+		</div>
+		<div class="col-md-8">
+
+
+			{% if product.outOfStock() %}
+				<span class="label label-danger">Out of stock</span>
+			{% elseif product.hasLowStock() %}
+				<span class="label label-warning">Low stock</span>
+			{% elseif product.inStock() %}
+				<span class="label label-success">In stock</span>
+			{% endif %}
+
+			<h4>{{ product.title }}</h4>
+			<p>{{ product.description }}</p>
+
+			{% if product.inStock() %}
+				<a href="{{ path_for('cart.add', { slug: product.slug, quantity: 1 }) }}" class="btn btn-default btn-sm">Add to cart</a>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
