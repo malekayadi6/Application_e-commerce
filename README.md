@@ -6,7 +6,7 @@
 
 • <a href="https://github.com/ngrx/effects" >  ngrx/effects </a> : Side effect model for @ngrx/store .
 
-•	<a href="https://github.com/ngx-translate/core">  ngx-translate </a>  : pour I18N (pour la multilingue français et anglais) . 
+•	<a href="https://github.com/ngx-translate/core">  ngx-translate </a>  : i18n pour L'internationalisation  ( français et anglais) . 
 
 •	<a href="https://github.com/michaelbromley/ngx-pagination">  ngx-pagination </a> : pour la pagination .
 
