@@ -1,0 +1,136 @@
+
+<!-- *** TOPBAR ***
+_________________________________________________________ -->
+<div id="top">
+  <div class="container">
+    <div class="col-md-6 offer" data-animate="fadeInDown">   <div id="radioBtn" class="btn-group">
+      <a class="btn btn-primary btn-sm" (click)="changeLanguage('en')" [class.active]="!currentLangFr" data-toggle="campus" ><span class="flag-icon flag-icon-gb" > </span> </a>
+      <a class="btn btn-primary btn-sm" (click)="changeLanguage('fr')" [class.active]="currentLangFr"  data-toggle="campus" ><span class="flag-icon flag-icon-fr" > </span> </a>
+    </div>
+    </div>
+    <div class="col-md-6" data-animate="fadeInDown">
+      <ul class="menu">
+
+          <li *ngIf="isAuth">
+            <a class="asma" (click)="asma(user)"> {{ user.name}} </a>
+          </li>
+        <li *ngIf="isAuth">
+          <a  class="asma" (click)="logout()" > {{ 'top-bar.Logout' | translate }} </a>
+        </li>
+        <li *ngIf="!isAuth">
+        <a [routerLink]="['/auth']">{{ 'top-bar.Register' | translate }}  / {{ 'top-bar.Login' | translate }}</a>
+        </li>
+        <li><a>Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+<!-- *** TOP BAR END *** -->
+
+<!-- *** NAVBAR ***
+_________________________________________________________ -->
+
+<div class="navbar navbar-default yamm" role="navigation" id="navbar">
+  <div class="container">
+
+    <div class="navbar-collapse collapse" id="navigation">
+
+      <ul class="nav navbar-nav navbar-left">
+        <li class=""><a [routerLink]="['/']">Home</a>
+        </li>
+
+
+        <li *ngFor="let categorie of categories?.categorie" class="dropdown yamm-fw">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">{{categorie?.title}} <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li>
+              <div class="yamm-content">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h5>{{categorie.title}}</h5>
+                    <ul>
+                      <li *ngFor="let subCategorie of categorie?.subcategories">
+                        <a [routerLink]="['/catalog',subCategorie?.title,subCategorie?.id]">{{subCategorie?.title}}</a>
+                      </li>
+
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="banner">
+
+                        <img [src]="getImage(categorie?.img1)"  class="img img-responsive" alt="">
+
+                    </div>
+
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="banner">
+
+                        <img [src]="getImage(categorie?.img2)"  class="img img-responsive" alt="">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+    <!--/.nav-collapse -->
+
+    <div class="navbar-buttons">
+
+      <div class="navbar-collapse collapse right" id="basket-overview">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+        <a [routerLink]="['/checkout/cart']" class=""><i></i>
+          <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart ({{ cart?.itemCount}})
+
+        </a>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+
+      <div class="navbar-collapse collapse right" id="search-not-mobile">
+        <button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
+          <span class="sr-only">Toggle search</span>
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="collapse clearfix" id="search">
+
+      <form class="navbar-form" role="search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search">
+          <span class="input-group-btn">
+
+			<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+
+		    </span>
+        </div>
+      </form>
+
+    </div>
+    <!--/.nav-collapse -->
+
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /#navbar -->
+
+<!-- *** NAVBAR END *** -->
+

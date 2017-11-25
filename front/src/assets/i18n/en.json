@@ -1,0 +1,44 @@
+{
+  "HomeLink": "Home",
+  "Categories": "Categories",
+  "items-in-cart": "items in cart",
+  "HomePage": {
+    "DisplayingAvialableProducts": "Displaying Avialable Products",
+    "Popular": "Popular",
+    "New": "New",
+    "Discount": "Discount",
+    "Price": "Price",
+    "Low": "Low",
+    "High": "High"
+  },
+  "top-bar": {
+    "Register": "Register",
+    "Login": "Login",
+    "Logout": "Logout",
+    "New-account": "New account"
+
+  },
+  "login-page": {
+    "Already-our-customer": "Already our customer?",
+    "Password": "Password"
+  },
+  "signup-page": {
+    "breadcrumb": "New account / Sign in",
+    "Not-our-registered": "Not our registered customer yet?",
+    "With-registration-with": "With registration with us new world of technologie, fantastic discounts and much more opens to you! The whole process will not take you more than a minute!",
+    "If-you-have-any-questions": "If you have any questions, please feel free to",
+    "If-you-have-any-questions2": "contact us",
+    "If-you-have-any-questions3": ", our customer service center is working for you 24/7.",
+    "Name": "Name",
+    "You-must-include-a-name": "You must include a name.",
+    "You-must-include-caracteres": "You must include in minimum 3 caracteres.",
+    "You-must-include-a-email": "You must include a email.",
+    "You-must-include-a-valid-email": "You must include a valid email address.",
+    "You-must-include-a-password": "You must include a password.",
+    "You-must-include-caracteres6": "You must include in minimum 6 caracteres.",
+    "Confirm-Password": "Confirm password ",
+    "You-must-include-a-valid-password-confirmation.": "You must include a password confirmation.",
+    "You-must-include-a-same-password": "You must include the same password .",
+    "Register": "Register"
+  }
+}

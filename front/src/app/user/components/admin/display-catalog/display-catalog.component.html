@@ -1,0 +1,91 @@
+<div id="all">
+
+  <div id="content">
+    <div class="container">
+
+
+      <div class="col-md-9" id="checkout">
+
+        <div class="box">
+
+
+          <h1>Edit  Products</h1>
+<div class="row">
+          <div class="col-sm-3 col-md-3">
+            <div class="form-group">
+              <label> categories </label>
+              <select  class="form-control" id="creditCardType"  [ngModel]="selectedDevice" (ngModelChange)="onChange($event)">
+
+                <option [value]="i" *ngFor="let categorie of rootCategorie?.categorie ; let i = index">
+                  {{categorie.title}}
+
+                </option>
+              </select>
+            </div>
+          </div>
+
+
+          <div *ngIf="catSelect" class="col-sm-3 col-md-3">
+            <div class="form-group">
+              <label for="expirationMonth">sub categorie </label>
+              <select  class="form-control" id="expirationMonth"   [ngModel]="selectedSubCat" (ngModelChange)="onChangeSub($event)">
+                <option>Select sub Categorie</option>
+                <option [value]="subcategorie.id" *ngFor="let subcategorie of subCat?.subcategories">
+                  {{subcategorie.title}}
+                </option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+
+<!--
+          {{ products | json }}
+-->
+          <table id="example" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name </th>
+              <th>Price</th>
+
+              <th>Stock</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr  *ngFor="let product of products?.products ">
+              <td>
+                <img class="align-content-center" [src]="getImage(product?.image[0]?.title)" alt="" >
+              </td>
+              <td>                <inline-editor type="textarea" [(ngModel)]="product.title" (onSave)="updateTitle(product.title,product.id)"> </inline-editor>
+              </td>
+              <td>  <div>
+
+                <inline-editor type="textarea" [(ngModel)]="product.price" (onSave)="updatePrice(product.price,product.id)"> </inline-editor>
+
+              </div></td>
+              <td>
+                <inline-editor type="textarea" [(ngModel)]="product.stock" (onSave)="updateStock(product.stock,product.id)"> </inline-editor>
+
+              </td>
+              <td>
+                <a
+                  class="btn btn-default"
+                  mwlConfirmationPopover
+                  [title]="title"
+                  [message]="message"
+                  placement="left"
+                  (confirm)="remove(product?.id)"
+                  (cancel)="cancelClicked = true"
+                ><i class="fa fa-trash-o"></i></a>
+              </td>
+
+            </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>

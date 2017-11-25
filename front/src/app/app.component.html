@@ -1,0 +1,19 @@
+
+<app-navbar></app-navbar>
+
+
+
+<div *ngIf="isAuth">
+  userrr {{ user.email}}
+
+
+
+  test <br>
+</div>
+<div *ngIf="!isAuth">
+</div>
+<router-outlet></router-outlet>
+
+
+
+<app-footer></app-footer>

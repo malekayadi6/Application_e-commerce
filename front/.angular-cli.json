@@ -1,0 +1,93 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "asma"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+
+
+        "assets/template_assets/css/bootstrap.css",
+        "assets/template_assets/css/font-awesome.min.css",
+        "assets/template_assets/css/animate.min.css",
+        "assets/template_assets/css/custom.css",
+        "assets/template_assets/css/owl.carousel.css",
+        "assets/template_assets/css/owl.theme.css",
+        "assets/template_assets/css/owl.transitions.css",
+        "assets/template_assets/css/style.blue.css",
+        "assets/template_assets/css/style.default.css",
+        "assets/template_assets/css/style.green.css",
+        "assets/template_assets/css/style.mono.css",
+        "assets/template_assets/css/style.pink.css",
+        "assets/template_assets/css/style.violet.css",
+        "assets/template_assets/css/bootstrap-social.css",
+        "assets/template_assets/css/docs.css",
+
+        "styles.css",
+        "../node_modules/ngx-toastr/toastr.css"
+      ],
+      "scripts": [
+        "assets/template_assets/js/respond.min.js",
+        "assets/template_assets/js/jquery-1.11.0.min.js",
+        "assets/template_assets/js/bootstrap.min.js",
+
+        "assets/template_assets/js/jquery.cookie.js",
+        "assets/template_assets/js/waypoints.min.js",
+        "assets/template_assets/js/modernizr.js",
+
+        "assets/template_assets/js/bootstrap-hover-dropdown.js",
+        "assets/template_assets/js/owl.carousel.min.js",
+        "assets/template_assets/js/front.js",
+        "assets/template_assets/js/jquery.flexslider.js",
+        "assets/template_assets/js/main.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

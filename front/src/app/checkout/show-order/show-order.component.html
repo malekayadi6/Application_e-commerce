@@ -1,0 +1,96 @@
+<div class="container">
+<div class="row">
+  <div class="col-md-12" id="basket">
+    <div class="box">
+    <h3>Order #{{order?.id}}</h3>
+    <hr>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Shipping to</h4>
+        <p>
+          {{order?.address?.address1}}
+        </p>
+      <p>
+          {{order?.address?.city}}
+        </p>
+      <p>
+          {{order?.address?.postal_code}}
+        </p>
+      <p>
+          {{order?.address?.created_at}}
+        </p>
+
+      </div>
+      <div class="col-md-8">
+        <h4>Items</h4>
+
+
+
+
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+
+                  <tr *ngFor="let product of order?.products" >
+
+                    <td>
+                      <a [routerLink]="['/catalog/product/',product?.id] ">{{product?.title}}</a>
+                    </td>
+                    <td>
+                      {{product?.pivot?.quantity}}
+
+                    </td>
+                    <td>{{product?.price}}</td>
+                    <td>$0.00</td>
+                    <td>{{product?.pivot?.quantity * product?.price}}</td>
+
+                  </tr>
+
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th colspan="3"></th>
+
+                    <th >Total</th>
+                    <th>$ {{order?.total}}</th>
+                  </tr>
+                  </tfoot>
+                </table>
+
+              </div>
+              <!-- /.table-responsive -->
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+    <hr>
+
+    <p>
+      Shipping: &#8369;5.00<br>
+      <strong>Order total:</strong>
+    </p>
+    </div>
+    <!-- /.box -->
+
+  </div>
+</div>
+
+</div>

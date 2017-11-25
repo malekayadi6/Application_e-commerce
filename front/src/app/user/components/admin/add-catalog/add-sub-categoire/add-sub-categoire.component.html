@@ -1,0 +1,92 @@
+
+<div class="col-md-9" id="checkout">
+
+  <div class="box">
+
+
+    <h1>Add sub categorie</h1>
+    <ul class="nav nav-pills nav-justified">
+      <li class=""><a [routerLink]="['/user/admin/add/product']"><i class="fa-product-hunt"></i><br>Product</a>
+      </li>
+      <li class=""><a [routerLink]="['/user/admin/add/categorie']"><br>Categorie </a>
+      </li>
+      <li class="active"><a [routerLink]="['/user/admin/add/subcategorie']"><i class="fa fa-money"></i><br> Sub Categorie </a>
+      </li>
+      <li class=""><a [routerLink]="['/user/admin/add/product']"><i class="fa fa-eye"></i><br> Autre </a>
+      </li>
+    </ul>
+    <div class="content">
+
+      <!--
+                ****************     form add product    ** * * * * * *  *
+      -->
+
+      <form [formGroup]="loginForm"  (ngSubmit)="onSubmit()" novalidate>
+        <div class="row">
+          <div class="col-sm-3 col-md-3">
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="CreditCardNumber">title </label>
+              <input type="text" class="form-control" id="CreditCardNumber" formControlName="title" >
+            </div>
+          </div>
+
+          <div class="col-sm-3 col-md-3">
+
+          </div>
+        </div>
+        <!-- /.row -->
+
+
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-sm-3 col-md-3">
+          </div>
+          <div class="col-sm-6 col-md-6">
+            <div class="form-group">
+              <label> categories </label>
+              <select  class="form-control" id="creditCardType" formControlName="categorie"                        >
+                <option  [value]="categorie.id"  *ngFor="let categorie of rootCategorie?.categorie ; let i = index">
+                  {{categorie.title}}
+
+                </option>
+
+
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3">
+          </div>
+
+        </div>
+
+        <!-- /.row -->
+
+        <div class="box-footer">
+          <div class="pull-left">
+          </div>
+          <div class="pull-right">
+            <button class="btn btn-default"> Cancel </button>
+            <button type="submit" class="btn btn-primary"> Add Categorie
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </form>
+
+
+    </div>
+    <!-- /.box -->
+
+
+
+  </div>
+
+
+
+
+

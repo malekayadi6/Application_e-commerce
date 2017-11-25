@@ -1,0 +1,119 @@
+<div id="all">
+
+  <div id="content">
+    <div class="container" *ngFor="let p of product?.product?.product">
+
+      <div class="col-md-12">
+        <ul class="breadcrumb">
+          <li><a [routerLink]="['/']">Home</a>
+          </li>
+
+          <li>{{p?.title}}</li>
+        </ul>
+
+      </div>
+
+
+
+
+      <div class="col-md-12" >
+
+        <div class="row" id="productMain">
+          <app-product-full-image *ngIf="ProductSkuMainImageDefault==false" [mainImage]="ProductSkuMainImage"></app-product-full-image>
+
+
+         <app-product-full-image *ngIf="ProductSkuMainImageDefault==true" [mainImage]=p?.image[0].title></app-product-full-image>
+
+
+          <div class="col-sm-6">
+            <div class="box">
+              <h1 class="text-center">{{p?.title}}</h1>
+              <p>{{p?.description}}
+              </p>
+              <p class="price">{{p?.price}} $ </p>
+
+              <p class="text-center buttons">
+
+
+              <span *ngIf="product?.product?.inStock==true" class="btn label-success" style="cursor:crosshair">
+              {{ p?.stock }} in Stock
+              </span>
+                <span *ngIf="product?.product?.outOfStock==true" class="btn label-danger" style="cursor:crosshair">
+              out of stock
+              </span>
+
+
+
+
+                <a *ngIf="product?.product?.outOfStock==true" class="btn btn-primary" disabled (click)="addToCart(p?.id)">
+                  <i class="fa fa-shopping-cart"></i> Add to cart
+                </a>
+
+
+                <a *ngIf="product?.product?.outOfStock==false"  class="btn btn-primary" (click)="addToCart(p?.id )">
+                  <i class="fa fa-shopping-cart"></i> Add to cart
+                </a>
+
+              </p>
+
+
+            </div>
+        <app-product-mutliple-image [multipleImages]="p?.image" (eventEmitterImageChange)="handleImageChange($event)"></app-product-mutliple-image>
+          <!--  <div class="row" id="thumbs">
+              <div *ngFor="let imgg of product?.product[0].image" class="col-xs-4">
+                <a class="thumb" (click)="changeProductSkuMainImage(image.url)">
+                  <img [src]="getImage(imgg?.title)" alt="" class="img-responsive">
+                </a>
+              </div>
+
+            </div>-->
+          </div>
+
+        </div>
+
+
+        <div class="box" id="details">
+          <p>
+          <h4>Product details</h4>
+          <p>White lace top, woven, has a round neck, short sleeves, has knitted lining attached</p>
+          <h4>Material & care</h4>
+          <ul>
+            <li>Polyester</li>
+            <li>Machine wash</li>
+          </ul>
+          <h4>Size & Fit</h4>
+          <ul>
+            <li>Regular fit</li>
+            <li>The model (height 5'8" and chest 33") is wearing a size S</li>
+          </ul>
+
+          <blockquote>
+            <p><em>Define style this season with Armani's new range of trendy tops, crafted with intricate details. Create a chic statement look by teaming this lace number with skinny jeans and pumps.</em>
+            </p>
+          </blockquote>
+
+          <hr>
+          <div class="social">
+            <h4>Show it to your friends</h4>
+            <p>
+              <share-buttons
+                [defaultStyle]="true"
+                [pinterest]="false"
+                [linkedIn]="false"
+                [tumblr]="false"
+                [whatsApp]="false"
+                [reddit]="false"
+                [stumbleUpOn]="false"></share-buttons>
+            </p>
+          </div>
+        </div>
+
+
+
+      </div>
+      <!-- /.col-md-9 -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /#content -->
+

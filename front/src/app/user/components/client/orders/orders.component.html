@@ -1,0 +1,38 @@
+<div class="col-md-9" id="customer-orders">
+  <div class="box">
+    <h1>My orders</h1>
+
+    <p class="lead">Your orders on one place.</p>
+    <p class="text-muted">If you have any questions, please feel free to <a href="contact.html">contact us</a>, our customer service center is working for you 24/7.</p>
+
+    <hr>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th>Order</th>
+          <th>Total item</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+<!--
+        <tr *ngFor="let myOrder of order">
+-->
+<tr>
+          <th># myOrder?.id</th>
+          <td>myOrder?.totalCommerceItemCount</td>
+          <td>$ myOrder?.priceInfo?.total}}</td>
+          <td><span class="label label-info">status</span>
+          </td>
+          <td><a class="btn btn-primary btn-sm">View</a>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+
+<div class="row products">
+  <div *ngFor="let product of products?.products | paginate: { itemsPerPage: 8, currentPage: p } "  class="col-md-3 col-sm-4">
+    <app-list-item-product [product]="product" ></app-list-item-product>
+  </div>
+  <!-- /.col-md-4 -->
+</div>
+
+
+
+
+
+
+
+
+
+<div class="pages">
+
+  <!--  <p class="loadMore">
+      <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i> Load more</a>
+    </p>-->
+
+  <pagination-controls (pageChange)="p = $event"  class="pagination"></pagination-controls>
+
+
+</div>

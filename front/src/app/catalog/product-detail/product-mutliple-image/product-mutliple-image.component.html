@@ -1,0 +1,7 @@
+<div class="row" id="thumbs">
+  <div *ngFor="let image of multipleImages" class="col-xs-4">
+    <a class="thumb" (click)="changeProductSkuMainImage(image.title)">
+      <img [src]="getProductImage(image.title)" alt="" class="img-responsive">
+    </a>
+  </div>
+</div>

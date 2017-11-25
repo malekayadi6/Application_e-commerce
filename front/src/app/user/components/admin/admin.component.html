@@ -1,0 +1,55 @@
+
+
+<div id="all">
+
+  <div id="content">
+    <div class="container">
+
+
+      <div class="col-md-3">
+        <!-- *** PAGES MENU ***
+_________________________________________________________ -->
+        <div class="panel panel-default sidebar-menu">
+
+          <div class="panel-heading">
+            <h3 class="panel-title">Pages</h3>
+          </div>
+
+          <div class="panel-body">
+            <ul class="nav nav-pills nav-stacked">
+              <li>
+                <a [routerLink]="['/user/admin']" >Add catalog</a>
+              </li>
+
+              <li [routerLinkActive]="['active']">
+                <a [routerLink]="['/user/admin/addusers']"> Add admin   </a>
+              </li>
+              <li [routerLinkActive]="['active']">
+                <a [routerLink]="['/user/admin/show']" >Display catalog Method</a>
+              </li>
+              <li [routerLinkActive]="['active']">
+                <a [routerLink]="['/user/admin/orders']" > Orders</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- *** PAGES MENU END *** -->
+
+      </div>
+
+      <div class="col-md-9" id="checkout">
+
+
+      <router-outlet></router-outlet>
+
+      </div>
+
+
+      <!-- /.container -->
+  </div>
+</div>
+
+
+

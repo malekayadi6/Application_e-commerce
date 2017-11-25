@@ -1,0 +1,31 @@
+
+    <div class="product">
+      <div class="flip-container">
+        <div class="flipper">
+          <div class="front">
+            <a [routerLink]="['/catalog/product/',product?.id]">
+              <img [src]="getImage(product?.image[0]?.title)" alt="" class="my-img">
+            </a>
+          </div>
+          <div class="back">
+            <a [routerLink]="['/catalog/product/',product?.id]">
+              <img [src]="getImage(product?.image[1]?.title)" alt="" class="my-img">
+            </a>
+          </div>
+        </div>
+      </div>
+      <a [routerLink]="['/catalog/product/',product?.id]" class="invisible">
+        <img [src]="getImage(product?.image[0]?.title)" alt="" class="my-img">
+      </a>
+      <div class="text">
+        <h3><a [routerLink]="['/catalog/product/',product?.id]">{{product.title}}</a></h3>
+        <p class="price" >${{product.price}}</p>
+        <p class="buttons">
+          <a [routerLink]="['/catalog/product/',product?.id]" class="btn btn-default">View detail</a>
+          <a (click)="addToCart(product?.id)" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+        </p>
+      </div>
+      <!-- /.text -->
+    </div>
+    <!-- /.product -->
+
