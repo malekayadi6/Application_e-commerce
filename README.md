@@ -14,7 +14,7 @@
 
 •	<a href="https://laravel.com/docs/5.5/eloquent">  eloquent laravel </a> : pour le mapping objet relationnel . 
 
- ## Ci-après quelques imprimes écran du projet.
+ ## Ci-après quelques imprimes écran du projet :
 
 ![detait](https://user-images.githubusercontent.com/25068188/33230047-faf84b98-d1db-11e7-9183-ba3ed8f43329.PNG)
 
